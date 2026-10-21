@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "id": "lightningpop",
+  "version": "1.0.0",
+  "name": "Lightning pop by STORM",
+  "description": "Spawns fake visual lightning on totem pops. Toggle with /light!",
+  "authors": ["STORM"],
+  "license": "MIT",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "com.example.lightningpop.TotemLightningClient"
+    ]
+  },
+  "mixins": [
+    "lightningpop.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.16.0",
+    "fabric-api": "*",
+    "minecraft": "1.21.1",
+    "java": ">=21"
+  }
+}
