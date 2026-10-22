@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "id": "lightningpop",
-  "version": "1.0.0",
+  "version": "${version}",
   "name": "Lightning pop by STORM",
   "description": "Spawns fake visual lightning on totem pops. Toggle with /light!",
   "authors": ["STORM"],
@@ -18,7 +18,7 @@
   "depends": {
     "fabricloader": ">=0.16.0",
     "fabric-api": "*",
-    "minecraft": "1.21.1",
+    "minecraft": "~1.21.11",
     "java": ">=21"
   }
 }

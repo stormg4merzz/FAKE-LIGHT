@@ -3,7 +3,7 @@ package com.example.lightningpop;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.client.command.v2.ClientCommandManager;
 import net.fabricmc.fabric.api.client.command.v2.ClientCommandRegistrationCallback;
-import net.minecraft.text.Text;
+import net.minecraft.network.chat.Component;
 
 public class TotemLightningClient implements ClientModInitializer {
     private static boolean enabled = true;
@@ -15,9 +15,9 @@ public class TotemLightningClient implements ClientModInitializer {
                 .executes(context -> {
                     enabled = !enabled;
                     if (enabled) {
-                        context.getSource().sendFeedback(Text.literal("\u00a76[STORM] \u00a7aLightning Pop Mod: ON"));
+                        context.getSource().sendFeedback(Component.literal("\u00a76[STORM] \u00a7aLightning Pop Mod: ON"));
                     } else {
-                        context.getSource().sendFeedback(Text.literal("\u00a76[STORM] \u00a7cLightning Pop Mod: OFF"));
+                        context.getSource().sendFeedback(Component.literal("\u00a76[STORM] \u00a7cLightning Pop Mod: OFF"));
                     }
                     return 1;
                 })
